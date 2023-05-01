@@ -9,25 +9,55 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
     <meta name="googlebot" content="index, follow, snippet" />
     <link href="index.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sidebar:hover {
+            opacity: 1;
+        }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="icon" href="logo.png">
     </head>
 <body>
     <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-10;"></div>
+    <div class="sidebar">
+        <h1>Stuff</h1>
+        <br>
+        <br>
+        
 
-    <a href="settings.html">
-        <i class="fas fa-cog Settings"></i>
-    </a>
-    
-        </a>
-        <button id="BingChilling" class="BingChilling" style="
-        width: fit-content;
-        height: 45px;
-        bottom: -10px;
-        left: 1%;
-        float: left;
-    ">Movie/Anime/Manga</button>
+        <div onclick="window.location.href = 'settings.html';" style="border: 1px solid white;height: 30px;font-size: 25px;">
+            <i class="fas fa-cog Settings"></i>
+            Settings
+        </div>
+        <div onclick="window.location.href = 'bookmarklet.html';" style="border: 1px solid white;height: 30px;font-size: 20px;">
+            About:blank Bookmarklet
+        </div>
 
+        <div onclick="window.location.href = 'https://discord.gg/PCVHC7Nc3y';" style="border: 1px solid white;height: 30px;font-size: 25px;">
+            Discord Server
+        </div>
+        <span style="margin-left: auto">Made By: GodCool#2980 </span>
+
+        
+            
+
+    </div>
         <form>
             <input placeholder="Type a URL or search here" style="position: fixed;bottom: 50%;">
         </form>

@@ -1,8 +1,8 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
-const currenturl = window.location.hostname
-const protocol = window.location.protocol
-const button = document.querySelector('#BingChilling');
+// const currenturl = window.location.hostname
+// const protocol = window.location.protocol
+// const button = document.querySelector('#BingChilling');
 
 
 const savedState = localStorage.getItem("cloakToggleState");
@@ -11,7 +11,7 @@ let url = null;
 
 
   
-button.addEventListener('click', () => {
+/* button.addEventListener('click', () => {
   // Your code to be executed when the button is clicked
   
   window.navigator.serviceWorker.register('./sw.js', {
@@ -33,7 +33,7 @@ button.addEventListener('click', () => {
       window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);}
   });
 });
-
+*/
 
 
 form.addEventListener('submit', async event => {
