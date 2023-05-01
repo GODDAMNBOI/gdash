@@ -16,7 +16,7 @@
             left: 0;
             width: 250px;
             height: 100%;
-            background: none;
+            background: black;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
@@ -27,7 +27,7 @@
         }
 
         .sidebar:hover {
-            opacity: 1;
+            opacity: 0.9;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -35,23 +35,26 @@
     </head>
 <body>
     <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-10;"></div>
-    <div class="sidebar">
+    <div class="sidebar" style="
+    text-align: center;">
         <h1>Stuff</h1>
         <br>
         <br>
         
 
-        <div onclick="window.location.href = 'settings.html';" style="border: 1px solid white;height: 30px;font-size: 25px;">
+        <div onclick="window.location.href = 'settings.html';" style="height: 30px;font-size: 25px; cursor:pointer;">
             <i class="fas fa-cog Settings"></i>
             Settings
         </div>
-        <div onclick="window.location.href = 'bookmarklet.html';" style="border: 1px solid white;height: 30px;font-size: 20px;">
+        <br>
+        <div onclick="window.location.href = 'bookmarklet.html';" style="height: 30px;font-size: 20px; cursor:pointer;">
             About:blank Bookmarklet
         </div>
-
-        <div onclick="window.location.href = 'https://discord.gg/PCVHC7Nc3y';" style="border: 1px solid white;height: 30px;font-size: 25px;">
+        <br>
+        <div onclick="window.location.href = 'https://discord.gg/PCVHC7Nc3y';" style="height: 30px;font-size: 25px; cursor:pointer;">
             Discord Server
         </div>
+        <br>
         <span style="margin-left: auto">Made By: GodCool#2980 </span>
 
         
@@ -61,14 +64,7 @@
         <form>
             <input placeholder="Type a URL or search here" style="position: fixed;bottom: 50%;">
         </form>
-        <footer>
 
-                    <a title="Discord" href="https://discord.gg/PCVHC7Nc3y">Discord</a>
-                    <a title="About:blank Bookmarklet" href="bookmarklet.html">About:blank bookmarklet</a>
-                    <span style="margin-left: auto">Made By: GodCool#2980 </span>
-
-        </footer>
-    
     
     <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
