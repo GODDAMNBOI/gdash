@@ -128,6 +128,7 @@ footer {
     align-items: center;
 }
 .Settings {
+  font-size: 50px;
   color: white;
 }
 .Bookmarklet {
