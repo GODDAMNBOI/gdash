@@ -24,7 +24,8 @@ body {
     animation: fadeInAnimation ease-in-out 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    color:white
+    color: white;
+    overflow: hidden;
 }
 
 .fa-magnifying-glass {

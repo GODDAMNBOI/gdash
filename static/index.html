@@ -13,66 +13,85 @@
         .sidebar {
             position: fixed;
             top: 0;
-            left: 0;
+            
             width: 250px;
             height: 100%;
             background: black;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
+        
 
-        .sidebar a {
-            display: block;
-            margin-bottom: 10px;
-        }
 
-        .sidebar:hover {
-            opacity: 0.9;
-        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="icon" href="logo.png">
     </head>
-<body>
-    <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-10;"></div>
-    <div class="sidebar" style="
-    text-align: center;">
-        <h1>Stuff</h1>
-        <br>
-        <br>
-        
-
-        <div onclick="window.location.href = 'settings.html';" style="height: 30px;font-size: 25px; cursor:pointer;">
-            <i class="fas fa-cog Settings"></i>
-            Settings
-        </div>
-        <br>
-        <div onclick="window.location.href = 'bookmarklet.html';" style="height: 30px;font-size: 20px; cursor:pointer;">
-            About:blank Bookmarklet
-        </div>
-        <br>
-        <div onclick="window.location.href = 'https://discord.gg/PCVHC7Nc3y';" style="height: 30px;font-size: 25px; cursor:pointer;">
-            Discord Server
-        </div>
-        <br>
-        <span style="margin-left: auto">Made By: GodCool#2980 </span>
-
-        
+    <body>
+        <div id="particles-js" style="position:fixed;width:100%;height:100%;z-index:-10;"></div>
+        <div class="sidebar" style="
+        text-align: center; left:-250px;">
+            <h1>Stuff</h1>
+            <br>
+            <br>
             
 
-    </div>
-        <form>
-            <input placeholder="Type a URL or search here" style="position: fixed;bottom: 50%;">
-        </form>
+            <div onclick="window.location.href = 'settings.html';" style="height: 30px;font-size: 25px; cursor:pointer;">
+                <i class="fas fa-cog Settings"></i>
+                Settings
+            </div>
+            <br>
+            <div onclick="window.location.href = 'bookmarklet.html';" style="height: 30px;font-size: 20px; cursor:pointer;">
+                About:blank Bookmarklet
+            </div>
+            <br>
+            <div onclick="window.location.href = 'https://discord.gg/PCVHC7Nc3y';" style="height: 30px;font-size: 25px; cursor:pointer;">
+                Discord Server
+            </div>
+            <br>
+            <span style="margin-left: auto">Made By: GodCool#2980 </span>
 
-    
-    <script src="uv/uv.bundle.js"></script>
-    <script src="uv/uv.config.js"></script>
-    <script src="index.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'particles.json');
-    </script>
-<script type='text/javascript'  src="uv/inject.js"></script>
-</body>
+            
+                
 
+        </div>
+            <form>
+                <input placeholder="Type a URL or search here" style="position: fixed;bottom: 50%;">
+            </form>
+            <div class="toggle-sidebar" onclick="toggleSidebar()" style="position: relative; top: 20px; left: 3%; right: 20px; cursor: pointer;">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        
+        <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script>
+        <script src="index.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.json');
+        </script>
+        <script>
+            document.querySelector('.toggle-sidebar').style.position = 'relative';
+            const toggleSidebar = () => {
+                
+                if (document.querySelector('.sidebar').style.left === '-250px') {
+                    document.querySelector('.sidebar').style.transition = 'opacity 1.0s ease-in-out';
+                    
+                    document.querySelector('.sidebar').style.opacity = '0.9';
+                    document.querySelector('.sidebar').style.left = '0px';
+                    document.querySelector('body').style.marginLeft = '250px';
+                    
+                    
+                } else {
+                    document.querySelector('.sidebar').style.transition = 'opacity 1.0s ease-in-out';
+                    document.querySelector('.sidebar').style.opacity = '0';
+                    document.querySelector('.sidebar').style.left = '-250px';
+                    document.querySelector('body').style.marginLeft = '0';
+                    
+                    
+                }
+
+            }
+        </script>
+    <script type='text/javascript'  src="uv/inject.js"></script>
+    </body>
 </html>
