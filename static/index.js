@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
-// const currenturl = window.location.hostname
-// const protocol = window.location.protocol
+const currenturl = window.location.hostname
+const protocol = window.location.protocol
 // const button = document.querySelector('#BingChilling');
 
 
